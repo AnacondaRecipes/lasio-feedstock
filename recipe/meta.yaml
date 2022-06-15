@@ -1,0 +1,32 @@
+package:
+  name: lasio
+  version: "0.30"
+
+source:
+  git_rev: "v0.30"
+  git_url: https://github.com/kinverarity1/lasio
+
+build:
+  noarch: python
+  number: 0
+  script: python -m pip install --no-deps --ignore-installed .
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - setuptools_scm
+    - numpy
+    - pip
+
+  run:
+    - python
+    - numpy
+
+test:
+  imports:
+    - lasio
+
+about:
+  home: https://github.com/kinverarity1/lasio
+  license: MIT
